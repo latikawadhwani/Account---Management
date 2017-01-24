@@ -1,0 +1,489 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AccountOpening_Team1.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 692px;
+        }
+        .style2
+        {
+            display: block;
+            float: left;
+            text-align: left;
+            width: 287px;
+            height: 26px;
+            margin-left: 25px;
+            margin-top: 15px;
+            font-family: Algerian;
+            font-weight: bold;
+            font-size: xx-large;
+            text-transform: uppercase;
+            background-color: #f5f5f5;
+        }
+        .style3
+        {
+        }
+        .style4
+        {
+            width: 76px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="style2">
+                ABC BANK</div><div style="float:right; top:20px;">
+                <asp:LinkButton ID="lnkLogout" runat="server" Text="Logout" 
+                    onclick="lnkLogout_Click"></asp:LinkButton></div>
+            <div class="clear hideSkiplink">
+            </div>
+            <div align="center" class="menutable">
+                <table>
+                    <tr>
+                        <td align="center">
+                        </td>
+                        <td>
+                            <asp:HyperLink ID="g1" Text="Home" runat="server" NavigateUrl="~/index.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td align="center">
+                            <asp:HyperLink ID="HyperLink8" Text="About Us" runat="server" 
+                                NavigateUrl="~/AboutUs.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td align="center">
+                            <asp:HyperLink ID="Facilities" Text="Facilities" runat="server" 
+                                NavigateUrl="~/Facilities.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td align="center">
+                            <asp:HyperLink ID="HyperLink11" Text="Feedback" runat="server" 
+                                NavigateUrl="~/Feedback.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td align="center">
+                            <asp:HyperLink ID="HyperLink10" Text="Why Us" runat="server" 
+                                NavigateUrl="~/WhyUs.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td>
+                            <asp:HyperLink ID="HyperLink7" Text="Contact Us" runat="server" 
+                                NavigateUrl="~/ContactUs.aspx"></asp:HyperLink>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="margin: 0px;">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <script language="JavaScript1.2" type="text/javascript">
+
+
+
+                            var variableslide1 = new Array()
+
+                            //variableslide1[x]=["path to image", "OPTIONAL link for image", "OPTIONAL text description (supports HTML tags)"]
+
+                            variableslide1[0] = ['Images/2.jpg', '', '']
+                            variableslide1[1] = ['Images/3.jpg', '', '']
+                            variableslide1[2] = ['Images/4.jpg', '', '']
+                            variableslide1[3] = ['Images/5.jpg', '', '']
+                            variableslide1[4] = ['Images/6.jpg', '', '']
+
+
+
+
+                            //configure the below 3 variables to set the dimension/background color of the slideshow
+
+                            var slidewidth1 = '640px' //set to width of LARGEST image in your slideshow
+                            var slideheight1 = '225px' //set to height of LARGEST iamge in your slideshow, plus any text description
+                            var slidebgcolor1 = '#f5f5f5'
+
+                            //configure the below variable to determine the delay between image rotations (in miliseconds)
+                            var slidedelay1 = 5000
+
+                            ////Do not edit pass this line////////////////
+
+                            var ie1 = document.all
+                            var dom1 = document.getElementById
+
+                            for (i1 = 0; i1 < variableslide1.length; i1++) {
+                                var cacheimage1 = new Image()
+                                cacheimage1.src = variableslide1[i1][0]
+                            }
+
+                            var currentslide1 = 0
+
+                            function rotateimages1() {
+                                contentcontainer1 = '<center>'
+                                if (variableslide1[currentslide1][1] != "")
+                                    contentcontainer1 += '<a href="' + variableslide1[currentslide1][1] + '">'
+                                contentcontainer1 += '<img src="' + variableslide1[currentslide1][0] + '" border="0" vspace="3">'
+                                if (variableslide1[currentslide1][1] != "")
+                                    contentcontainer1 += '</a>'
+                                contentcontainer1 += '</center>'
+
+
+
+                                if (variableslide1[currentslide1][2] != "")
+                                    contentcontainer1 += '</a>'
+                                contentcontainer1 += '</center>'
+
+
+
+                                if (variableslide1[currentslide1][3] != "")
+                                    contentcontainer1 += '</a>'
+                                contentcontainer1 += '</center>'
+
+
+
+
+                                if (variableslide1[currentslide1][4] != "")
+                                    contentcontainer1 += '</a>'
+                                contentcontainer1 += '</center>'
+
+
+
+
+                                if (variableslide1[currentslide1][5] != "")
+                                    contentcontainer1 += '</a>'
+                                contentcontainer1 += '</center>'
+
+
+
+
+                                if (document.layers) {
+                                    crossrotateobj1.document.write(contentcontainer1)
+                                    crossrotateobj1.document.close()
+                                }
+                                else if (ie1 || dom1)
+                                    crossrotateobj1.innerHTML = contentcontainer1
+                                if (currentslide1 == variableslide1.length - 1) currentslide1 = 0
+                                else currentslide1++
+                                setTimeout("rotateimages1()", slidedelay1)
+                            }
+
+                            if (ie1 || dom1)
+                                document.write('<div id="slidedom1" style="width:' + slidewidth1 + ';height:' + slideheight1 + '; background-color:' + slidebgcolor1 + '"></div>')
+
+                            function start_slider1() {
+                                crossrotateobj1 = dom1 ? document.getElementById("slidedom1") : ie1 ? document.all.slidedom1 : document.slidensmain1.document.slidenssub1
+                                if (document.layers)
+                                    document.slidensmain1.visibility = "show"
+                                rotateimages1()
+                            }
+
+                            if (ie1 || dom1)
+                                start_slider1()
+                            else if (document.layers)
+                                window.onload = start_slider1
+
+                        </script>
+                        <ilayer id="slidensmain1" width="&{slidewidth1};" height="&{slideheight1};" bgcolor="&{slidebgcolor1};"
+                            visibility="hide"><layer id="slidenssub1" width=&{slidewidth1}; left=0 top=0 right=10></layer></ilayer>
+                    </td> <td>
+                        <table style="border-bottom:1px solid black;border-top:1px solid black;border-left:1px solid black;border-right:1px solid black;height:225px;">
+                            <tr>
+                                <td colspan="3" align="center" bgcolor="#999999" 
+                                    style="font-size: large; font-weight: bold; color: #FFFFFF;">
+                                    May We Contact You
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style4">
+                                    Name
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtName" runat="server" CssClass="style3" Width="188px"></asp:TextBox>
+                                </td><td><asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="*" 
+                                        ControlToValidate="txtName" ForeColor="#FF3300" ValidationGroup="m1"></asp:RequiredFieldValidator> 
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtName"
+                        Display="Dynamic" 
+                        
+                        ErrorMessage="Please Enter Name in Standard Format(eg. pankaj gupta)" ForeColor="Red"
+                        SetFocusOnError="True" 
+                        ValidationExpression="[ ]{0}[a-z]{2,20}[ ][a-z]{2,20}[ ]{0,1}[a-z]{2,20}" 
+                        ValidationGroup="m1"></asp:RegularExpressionValidator>
+                    </td>
+                            </tr>
+                            <tr>
+                                <td class="style4">
+                                    ContactNo
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtContact" runat="server" CssClass="style3" Width="188px"></asp:TextBox>
+                                </td><td><asp:RequiredFieldValidator ID="rfvContact" runat="server" ErrorMessage="*" ControlToValidate="txtContact" ForeColor="#FF3300" ValidationGroup="m1"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtContact"
+                        Display="Dynamic" ErrorMessage="Invalid" ForeColor="Red"
+                        SetFocusOnError="True" ValidationExpression="[7-9]{1}[0-9]{9}" 
+                        ValidationGroup="m1"></asp:RegularExpressionValidator>
+                </td>
+                            </tr>
+                            <tr>
+                                <td class="style4">
+                                    Email
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="style3" Width="188px"></asp:TextBox>
+                                </td><td><asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="*" ControlToValidate="txtEmail" ForeColor="#FF3300" ValidationGroup="m1"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" 
+                                        ControlToValidate="txtEmail" ErrorMessage="Invalid" ForeColor="Red" 
+                                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                                        ValidationGroup="m1"></asp:RegularExpressionValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="center">
+                                    <asp:Button ID="btnRegister" Text="Send" runat="server" OnClick="btnRegister_Click" ValidationGroup="m1" />
+                                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                   
+                </tr>
+            </table>
+        </div>
+        <div class="main">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <hr style="width: 459px; height: 5px;" noshade="noshade" />
+                                </td>
+                                <td class="s1">
+                                    ABC
+                                </td>
+                                <td>
+                                    <hr style="width: 461px; height: 5px; margin-left: 0px;" noshade="noshade" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;" valign="top">
+                        <div class="leftCol" >
+                            <table >
+                                <tr>
+                                    <td valign="top">
+                                        <asp:MultiView ID="mlt1" runat="server">
+                                            <asp:View ID="V1" runat="server"><table><tr><td>Newsletter</td></tr><tr><td><asp:BulletedList ID="bltNews" runat="server"></asp:BulletedList></td></tr></table>
+                                            </asp:View>
+                                            <asp:View ID="V2" runat="server">
+                                                <table>
+                                                    
+                                                    <tr>
+                                                        <td class="style1">
+                                                            <asp:HyperLink ID="hplViewPersonalDetails" runat="server" NavigateUrl="~/ViewPersonalDetails.aspx">View Profile</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplViewTransactionDetails" runat="server" NavigateUrl="~/ViewTransactionDetails.aspx">View Transaction Details</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplRequestCheckbook" runat="server" NavigateUrl="~/RequestCheckbook.aspx">Request Checkbook</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplChangeCustPassword" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </asp:View>
+                                            <asp:View ID="V3" runat="server">
+                                                <table>
+                                                   
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplCustomerRegistration" runat="server" NavigateUrl="~/CustomerRegistration.aspx">New Customer Registration</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplViewCustomerDetails" runat="server" NavigateUrl="~/ViewRegistrationDetails.aspx">View Customer Details</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplEditCustomerDetails" runat="server" NavigateUrl="~/EditCustomerDetails.aspx">Edit Customer Details</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplChangePass" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </asp:View>
+                                            <asp:View ID="v4" runat="server">
+                                                <table>
+                                                 
+                                                   
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplViewPending" runat="server" NavigateUrl="~/ApproveRequest.aspx">View Pending Requests</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplViewcustDetails" runat="server" NavigateUrl="~/ViewDetails.aspx">View Details</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplChngPass" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </asp:View>
+                                            <asp:View ID="v5" runat="server">
+                                                <table>
+                                                   
+                                                   
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplCreateCustID" runat="server" NavigateUrl="~/CreateCustomerID.aspx">Add Customer to Bank</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                 
+                                                    <tr>
+                                                        <td>
+                                                            <asp:HyperLink ID="hplChange" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <hr />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </asp:View>
+                                        </asp:MultiView>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td class="style1" valign="top">
+                        <div class="rightcolUPPER">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer" align="center">
+            <table align="center">
+                <tr>
+                    <td>
+                        <marquee bgcolor="grey" height="20px" style="color: White; font-size: small; width: 99%;">ABC Bank will never send you e-mails asking for confidential details of your account/ PIN/ Password or personal parameters . Beware of anyone asking you for such information on behalf of the bank through e-mails or phone calls. 
+
+</marquee>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        © Copyright 2013, ABC Bank, All rights reserved
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+ //check for valid date
+
+    /*     function checkForValidDate() {
+        var ddlVDay = document.getElementById('ddlDate');
+        var day=ddlDay.value;
+        var ddlVMonth = document.getElementById('ddlMonth');
+        var month=ddlMonth.value;
+        var ddlYear = document.getElementById('ddlYear');
+        var year=ddlYear.value;
+       
+
+
+      
+       
+           
+            
+
+        if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31) {
+        alert(“Month “+month+” doesn`t have 31 days!”);
+        return false;
+        }
+
+        if (month == 2) { // check for february 29th
+        var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+        if (day > 29 || (day == 29 && !isleap)) {
+        //alert(“February ” + year + ” doesn`t have ” + day + ” days!”);
+        return false;
+        }
+        }
+        return true; // date is valid
+        }
+
+      * /
